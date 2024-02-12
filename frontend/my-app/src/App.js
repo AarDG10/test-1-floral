@@ -7,6 +7,7 @@ import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import Shop from "./Pages/Shop";
+import  Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
         </Routes>
       </Router>
+      <Footer/>
     </div>
   );
 }
