@@ -1,0 +1,81 @@
+:root{   /*root css created for code reusablitity and coding efficiency*/
+    --bgcolor: #50C878;
+    --navtexcolor:#007FFF;
+    --sec-color:#DCFFE3;
+    --dvert:#17B169;
+    --newsbg:#000080;
+}
+
+.Navbar{
+    background-color: var(--bgcolor);
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 80px;
+    z-index: 999;
+    position: sticky;
+    top:0;
+    left:0;
+    height: 25px;
+    box-shadow: 0 1px 3px -2px black;
+}
+
+.Navbar img{
+    margin-top: 0.4em;
+    width:20%;
+    height: 100%;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu.active{
+    right:0px;
+}
+
+.nav-menu li a{
+    text-decoration: none;
+    font-size:18px;
+    font-weight: 600;
+    color: var(--sec-color);   /*Text Color is Navbar*/
+    transition: 0.2s ease;
+    margin-left: 40px;
+}
+
+.nav-menu li{
+    list-style-type: none;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active{
+    color: var(--navtexcolor);
+    border-bottom: 2px solid var(--navtexcolor);
+}
+
+.nav-login-cart{
+    margin-left: 20px;
+}
+
+.nav-login-cart img{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-cart-count{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -44px;
+    margin-left: 3px;
+    border-radius:11px;
+    font-size: 14px;
+    background-color: var(--navtexcolor);
+    color:yellow;
+}
