@@ -14,10 +14,9 @@ export const Navbar = () => {
                 <li><Link to='/about'>About</Link></li>
                 <li><Link to='/contact'>Contact</Link></li>
                 <li><Link to='/login'>Login</Link></li>
-                <a href="#" id="close"><i class='bx bx-x'></i></a>
             </ul>
             <div className="nav-login-cart">
-                <img src={cart_icon} alt="Cart"></img>
+                <Link to='/cart'><img src={cart_icon} alt="Cart"></img></Link>
                 <div className="nav-cart-count">0</div>
             </div>
     </div>
