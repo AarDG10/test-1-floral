@@ -14,6 +14,10 @@
     margin-bottom: 14%;
 }
 
+.popular hr{
+    color:var(--dvert);
+}
+
 .popular span{
     color: var(--dvert);
 }
