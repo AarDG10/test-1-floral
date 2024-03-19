@@ -7,7 +7,7 @@
 }
 
 #news{
-    margin-top: 2em;
+    margin-top: 10rem;
     display: flex;
     justify-content: space-between;
     flex-wrap:wrap;
