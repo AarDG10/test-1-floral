@@ -8,7 +8,7 @@ import { Deuxlayer } from './Deuxlayer'
 const Popular = () => {
   return (
     <div className="popular">
-        <h1>Popular in <span>Vert</span></h1>
+        <h1>Popular in&nbsp;<span> Vert</span></h1>
         <hr/>
         <Unlayer/>
         <Deuxlayer/>

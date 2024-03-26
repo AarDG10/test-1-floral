@@ -9,6 +9,7 @@ import 'boxicons';
 const Footer = () => {
   return (
     <div>
+        <div className="calor"></div>
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
         <footer className="section-p1">
             <div className="col">

@@ -1,11 +1,13 @@
 import React from 'react'
 import './Item.css'
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import 'boxicons'
 
 const Item = (props) => {
   return (
     <div class="pro"> {/* Card */ }
-                <img src={props.image}/>
+                <Link to={`/product/${props.id}`}>
+                <img src={props.image}/></Link>
                 <div class="des">
                     <h5>{props.name}</h5>
                     <div class="star">

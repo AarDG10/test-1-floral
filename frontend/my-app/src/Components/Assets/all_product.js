@@ -4,11 +4,12 @@ import Peacelily from './Plant-Items/Plant2.jpg'
 import Mint from './Plant-Items/Plant6.jpg'
 import Aloevera from './Plant-Items/Plant7.jpg'
 import bostonfern from './Plant-Items/Bostonfern.jpeg'
+import rosemary from './Plant-Items/rosemary.png'
 let all_product = [
   {
     id: 1,
     name: "Spider Plant",
-    category: "Aesthetic",
+    category: "null",
     image: spiderplant,
     new_price: 50.0,
     old_price: 80.5,
@@ -46,6 +47,13 @@ let all_product = [
     name:"Boston Fern",
     category: "Aesthetic",
     image:bostonfern,
+    new_price:200.00,
+    old_price:150.00,
+  },
+  {id:7,
+    name:"Rosemary",
+    category: "Herb",
+    image:rosemary,
     new_price:200.00,
     old_price:150.00,
   },

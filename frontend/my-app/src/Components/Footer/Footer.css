@@ -36,6 +36,11 @@ margin:0.5em;
     margin-top: auto;
 }
 
+.calor{
+    width:auto;
+    height: 0.2em;
+    background-color: #17B169;
+}
 footer{
     display: flex;
     flex-direction: row;

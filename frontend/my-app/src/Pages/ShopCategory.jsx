@@ -8,6 +8,9 @@ const ShopCategory = (props) => {
 
     return (
     <div className="shop-category">
+        <h1><span>{props.category}</span></h1>
+        <hr/>
+        <div className="shop-item">
         {all_product.map((item,i)=>{
             if(props.category===item.category)
             {
@@ -17,6 +20,7 @@ const ShopCategory = (props) => {
                 return null;
             }
         })}
+        </div>
     </div>
   )
 }

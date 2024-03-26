@@ -10,6 +10,7 @@ import Shop from "./Pages/Shop";
 import Cart from './Pages/Cart';
 import  Footer from './Components/Footer/Footer';
 import ShopCategory from './Pages/ShopCategory';
+import Product from './Pages/Product';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           <Route path='/medicinal' element={<ShopCategory category="Medicinal"/>}/>
           <Route path='/herb' element={<ShopCategory category="Herb"/>}/>
           <Route path='/aesthetic' element={<ShopCategory category="Aesthetic"/>}/>
+          <Route path='/product' element={<Product/>}>
+            <Route path=':productId' element={<Product/>}/>
+          </Route>
           <Route path="/about" element={<Abt />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
