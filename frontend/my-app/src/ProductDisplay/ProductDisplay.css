@@ -8,6 +8,7 @@
 .main{
     display: flex;
     flex-direction: row;
+    margin-bottom: 4em;
 }
 .calr{
     width: 16em;
@@ -38,5 +39,24 @@
     justify-content: center;
 }
 .productdisplay-right-star{
-    margin-top: 10em;
+    margin-top: 6em;
+}
+.addstars{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button1 button{
+    font-size: 1.5em;
+    margin-top: 2em;
+    display: flex;
+    background-color: var(--bgcolor);
+    color:var(--sec-color);
+    border:0;
+    padding: 18px 80px 14px 65px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size:15px;
+    border-radius: 6px;
 }

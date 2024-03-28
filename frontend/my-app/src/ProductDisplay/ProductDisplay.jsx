@@ -2,9 +2,11 @@ import React, { useContext , useState, useEffect} from 'react'
 import './ProductDisplay.css'
 import star_icon from "../Components/Assets/Plant-Items/star_icon.png"
 import star_dullicon from "../Components/Assets/Plant-Items/star_dull_icon.png"
+import { ShopContext } from '../Context/ShopContext'
 
 const ProductDisplay = (props) => {
     const {product} = props;
+    const {addToCart} = useContext(ShopContext);
     const [stringArray, setStringArray] = useState([]);
     useEffect(() => {
         // Fetch or import data from JSON
@@ -38,6 +40,7 @@ const ProductDisplay = (props) => {
                     ${product.new_price}
                 </div>
             </div>
+            <div className="addstars">
             <div className="productdisplay-right-star">
                 <img src={star_icon} alt=""/>
                 <img src={star_icon} alt="" />
@@ -48,8 +51,10 @@ const ProductDisplay = (props) => {
                     (122)
                 </p>
             </div>
-            <button>ADD TO CART</button>
-            
+            <div className="button1">
+                <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
+            </div>
+            </div>
         </div>
         </div>
     </div>
