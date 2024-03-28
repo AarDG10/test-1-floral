@@ -24,7 +24,7 @@
     border-right: solid var(--dvert);
 }
 .productdisplay-img img{
-    margin-left: 6em;
+    margin-left: 4em;
     margin-right: 2em;
     width: 340px;
     height: 100%;
@@ -33,7 +33,7 @@
     justify-content: center;
 }
 .productdisplay-right{
-    margin-left: 15em;
+    margin-left: 7em;
     align-items: center;
     justify-content: center;
 }

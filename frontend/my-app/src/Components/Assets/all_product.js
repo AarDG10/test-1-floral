@@ -38,6 +38,8 @@ let all_product = [
   },
   {id:5,
     name:"Aloe Vera",
+    desc: "Discover the natural wonders of our fresh Aloe Vera plant, meticulously nurtured for optimal health and vitality. Renowned for its healing properties and air-purifying abilities, this versatile succulent is a must-have addition to any indoor garden or living space.",
+    inst:["Sunlight: Place your Aloe Vera plant in a location with bright, indirect sunlight. A south- or west-facing window is ideal. While Aloe Vera enjoys sunlight, direct exposure to intense sunlight for extended periods may cause its leaves to turn brown or yellow.","Watering: Aloe Vera is a drought-tolerant plant and prefers dry conditions. Water your plant deeply but infrequently, allowing the soil to dry out completely between waterings. Overwatering can lead to root rot, so err on the side of underwatering rather than overwatering.", "Potting Soil: Use a well-draining potting mix specifically formulated for succulents or cacti. Aloe Vera plants thrive in sandy or gritty soil that allows excess moisture to drain away quickly."],
     category: "Medicinal",
     image:Aloevera,
     new_price:200.00,

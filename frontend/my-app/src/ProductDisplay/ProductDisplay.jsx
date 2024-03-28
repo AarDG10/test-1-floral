@@ -1,10 +1,15 @@
-import React, { useContext } from 'react'
+import React, { useContext , useState, useEffect} from 'react'
 import './ProductDisplay.css'
 import star_icon from "../Components/Assets/Plant-Items/star_icon.png"
 import star_dullicon from "../Components/Assets/Plant-Items/star_dull_icon.png"
 
 const ProductDisplay = (props) => {
     const {product} = props;
+    const [stringArray, setStringArray] = useState([]);
+    useEffect(() => {
+        // Fetch or import data from JSON
+        setStringArray(product.inst); // Assuming "strings" is the key in your JSON
+      }, []);
   return (
     <div className="productdisplay">
         <div className="calr"></div>
@@ -16,6 +21,15 @@ const ProductDisplay = (props) => {
         </div>
         <div className="productdisplay-right">
             <h1>{product.name}</h1>
+            <div className="productdisplay-right-description">
+                {product.desc}
+            </div>
+            <div className="instructions">
+                <h3>Care Instructions: </h3>
+                {stringArray.map((str, index) => (
+          <li key={index}>{str}</li>
+        ))}
+            </div>
             <div className="productdisplay-right-prices">
                 <div className="productdisplay-right-price-old">
                     ${product.old_price}
@@ -23,9 +37,6 @@ const ProductDisplay = (props) => {
                 <div className="productdisplay-right-price-new">
                     ${product.new_price}
                 </div>
-            </div>
-            <div className="productdisplay-right-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </div>
             <div className="productdisplay-right-star">
                 <img src={star_icon} alt=""/>
