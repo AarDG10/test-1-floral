@@ -1,0 +1,10 @@
+:root{   /*root css created for code reusablitity and coding efficiency*/
+    --bgcolor: #50C878;
+    --navtexcolor:#007FFF;
+    --sec-color:#DCFFE3;
+    --dvert:#17B169;
+    --newsbg:#000080;
+}
+.breadcrumb{
+    color:var(--newsbg);
+}

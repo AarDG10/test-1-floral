@@ -1,0 +1,42 @@
+:root{   /*root css created for code reusablitity and coding efficiency*/
+    --bgcolor: #50C878;
+    --navtexcolor:#007FFF;
+    --sec-color:#DCFFE3;
+    --dvert:#17B169;
+    --newsbg:#000080;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.calr{
+    width: 16em;
+    height:0.12em;
+    background-color: var(--bgcolor);
+}
+.productdisplay-left{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 6em;
+}
+.productdisplay-img{
+    margin-top: 4em;
+    border-right: solid var(--dvert);
+}
+.productdisplay-img img{
+    margin-left: 6em;
+    margin-right: 2em;
+    width: 340px;
+    height: 100%;
+}
+.productdisplay-left h1{
+    justify-content: center;
+}
+.productdisplay-right{
+    margin-left: 15em;
+    align-items: center;
+    justify-content: center;
+}
+.productdisplay-right-star{
+    margin-top: 10em;
+}
