@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext , useState, useEffect} from 'react'
 import './Item.css'
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import 'boxicons'
@@ -17,9 +17,9 @@ const Item = (props) => {
                     <box-icon name='star'></box-icon>
                     <box-icon name='star'></box-icon>
                     </div>
-                    <h4><box-icon name='rupee'></box-icon>{props.new_price}</h4>
+                    <h4>₹{props.new_price}</h4>
                 </div>
-                <a href='#'>Add to Cart</a>
+                <Link to={`/product/${props.id}`}>View Product</Link>
       </div>
   )
 }
