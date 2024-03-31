@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/AarDG10/test-1-floral/issues"
   },
-  "homepage": "https://github.com/AarDG10/test-1-floral#readme"
+  "homepage": "https://github.com/AarDG10/test-1-floral#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.2.4",
+    "multer": "^1.4.5-lts.1"
+  }
 }
