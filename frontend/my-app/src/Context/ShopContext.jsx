@@ -5,7 +5,7 @@ export const ShopContext =  createContext(null);
 
 const getDefaultCart = ()=>{
   let cart = {};
-  for(let index=0;index<all_product.length+1;index++)
+  for(let index=0;index<all_product.length+1;index++)  //Array Initialization
   {
     cart[index]=0;
   }
@@ -23,7 +23,7 @@ const ShopContextProvider = (props) => {
   const removeFromCart = (itemId)=>{
     setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
   }
-
+  
   const contextValue = {all_product,cartItems, addToCart, removeFromCart};
     return (
     <ShopContext.Provider value={contextValue}>

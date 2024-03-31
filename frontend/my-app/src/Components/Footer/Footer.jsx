@@ -5,6 +5,7 @@ import card from '../Assets/card.png'
 import stripe from '../Assets/stripe.png'
 import './Footer.css'
 import 'boxicons';
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -21,7 +22,7 @@ const Footer = () => {
                     <div class="icon">
                         <box-icon type='logo' name='meta'></box-icon>
                         <box-icon name='instagram' type='logo' ></box-icon>
-                        <box-icon name='github' type='logo' ></box-icon>
+                        <Link to='https://github.com/AarDG10/test-1-floral'><box-icon name='github' type='logo' ></box-icon></Link>
                     </div>
                 </div>
             </div>

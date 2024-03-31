@@ -1,0 +1,92 @@
+:root{   /*root css created for code reusablitity and coding efficiency*/
+    --bgcolor: #50C878;
+    --navtexcolor:#007FFF;
+    --sec-color:#DCFFE3;
+    --dvert:#17B169;
+    --newsbg:#000080;
+}
+
+.calor{
+    width:100%;
+    background-color: var(--dvert);
+}
+
+.cartitems{
+    margin: 100px 170px;
+}
+
+.carticon-product-icon{
+    width:125%;
+    height: 120%;
+}
+.cartitems hr{
+    height:3px;
+    background: white;
+    border:0;
+}
+
+.cart-items-format-main{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap:75px;
+    padding:20px 0px;
+    color:#454545;
+    font-size:18px;
+    font-weight: 600;
+}
+
+.vert-color{
+    color:var(--dvert);
+    font-weight:700;
+}
+
+.cartitems-format{
+    font-size: 17px;
+    font-weight:500; 
+}
+
+.cartitems-remove-icon{
+    width:15px;
+    margin: 0 40px;
+    cursor:pointer;
+}
+
+.cartitems-quantity{
+    width:64px;
+    height:50px;
+    border:2px solid #ebebeb;
+    background: #fff;
+
+}
+
+.cartitems-down{
+    display:flex;
+    margin:100px 0px;   
+}
+
+.cartitems-total{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+    gap:40px;
+}
+
+.cartitems-total-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.checkout{
+    background-color: var(--bgcolor);
+    color:var(--sec-color);
+    border:0;
+    margin-top:5px;
+    padding: 18px 80px 14px 65px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size:15px;
+    border-radius: 6px;
+}
