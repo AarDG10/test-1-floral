@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import './CartItem.css'
 import { ShopContext } from '../../Context/ShopContext'
+// import removei
 
 export const CartItems = () => {
     const {all_product, CartItems, removeFromCart} = useContext(ShopContext);

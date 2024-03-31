@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 export const Navbar = () => {
   return (
     <div className='Navbar'>
-        <a href="#" class="logo"><img src={logo} alt="Floral Fusion"/></a>
+        <Link to='/about'><a href="#" class="logo"><img src={logo} alt="Floral Fusion"/></a></Link>
             <ul className='nav-menu'>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/shop'>Shop</Link></li>
