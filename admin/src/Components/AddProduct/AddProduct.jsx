@@ -65,6 +65,14 @@ const AddProduct = () => {
           <input value={productDetails.new_price} onChange={changeHandler} type="text" name='new_price' placeholder='Enter Here'/>
         </div>
       </div>
+        <div className="addproduct-itemfield">
+          <p>Plant Description</p>
+          <input value={productDetails.desc} onChange={changeHandler} type="text" name='desc' placeholder='Enter Here'/>
+        </div>
+        <div className="addproduct-itemfield">
+          <p>Care Instructions</p>
+          <input value={productDetails.inst} onChange={changeHandler} type="text" name='inst' placeholder='Enter Here'/>
+        </div>
       <div className="addproduct-itemfield">
         <p>Product Category</p>
         <select name="category" className='add-product-selector' value={productDetails.category} onChange={changeHandler}>
