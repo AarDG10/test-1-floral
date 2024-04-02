@@ -10,7 +10,9 @@ const AddProduct = () => {
     image:"",
     category:"herb",
     new_price:"",
-    old_price:""
+    old_price:"",
+    desc:"",
+    inst:"",
   })
   const imageHandler = (e) => {
     setImage(e.target.files[0]);
