@@ -11,7 +11,9 @@ app.use(express.json());
 app.use(cors());
 
 // Database Connection with mongodb
-mongoose.connect("mongodb+srv://aaroldsouza:floral%40getes07@cluster0.nvjeksq.mongodb.net/");  //Remember to encode passk with uri in case of special chars (%40 for @)
+const config = require('./config.json');
+
+mongoose.connect(config.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true }); //Remember to encode passk with uri in case of special chars (%40 for @)
 
 //API Connection
 app.get("/",(req,res)=>{
