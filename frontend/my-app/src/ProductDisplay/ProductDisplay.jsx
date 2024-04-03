@@ -7,11 +7,11 @@ import { ShopContext } from '../Context/ShopContext'
 const ProductDisplay = (props) => {
     const {product} = props;
     const {addToCart} = useContext(ShopContext);
-    const [stringArray, setStringArray] = useState([]);
-    useEffect(() => {
-        // Fetch or import data from JSON
-        setStringArray(product.inst); // Assuming "strings" is the key in your JSON
-      }, []);
+    // const [stringArray, setStringArray] = useState([]);
+    // useEffect(() => {
+    //     // Fetch or import data from JSON
+    //     setStringArray(product.inst); // Assuming "strings" is the key in your JSON
+    //   }, []);
   return (
     <div className="productdisplay">
         <div className="calr"></div>
@@ -28,9 +28,10 @@ const ProductDisplay = (props) => {
             </div>
             <div className="instructions">
                 <h3>Care Instructions: </h3>
-                {stringArray.map((str, index) => (
-          <li key={index}>{str}</li>
-        ))}
+                {/* {stringArray.map((str, index) => (
+          <li key={index}>{str}</li> */}
+        {/* ))} */}
+            <h4>{product.inst}</h4>
             </div>
             <div className="productdisplay-right-prices">
                 <div className="productdisplay-right-price-old">

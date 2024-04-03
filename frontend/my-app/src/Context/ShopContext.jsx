@@ -1,11 +1,11 @@
 import React, { createContext, useContext , useState, useEffect} from 'react'
-import all_product from '../Components/Assets/all_product';
+// import all_product from '../Components/Assets/all_product';
 
 export const ShopContext =  createContext(null);
 
 const getDefaultCart = ()=>{
   let cart = {};
-  for(let index=0;index<all_product.length+1;index++)  //Array Initialization
+  for(let index=0;index<300+1;index++)  //Array Initialization
   {
     cart[index]=0;
   }
@@ -13,8 +13,15 @@ const getDefaultCart = ()=>{
 }
 
 const ShopContextProvider = (props) => {
+
+  const [all_product,setAll_Product] = useState([]);
   const [cartItems,setCartItems] = useState(getDefaultCart());  
-  
+  useEffect(()=>{
+    fetch('http://localhost:4000/allproducts')
+    .then((response)=>response.json())
+    .then((data)=>setAll_Product(data))
+  },[])
+
   const addToCart = (itemId) =>{
     setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
     console.log(cartItems);
