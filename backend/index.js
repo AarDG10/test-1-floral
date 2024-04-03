@@ -3,12 +3,12 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
-const multer = require("multer");
+const multer = require("multer");  //for image storage system
 const path = require("path");
-const cors = require("cors");
+const cors = require("cors");  //to provide access to react.js project
 
 app.use(express.json());
-app.use(cors());
+app.use(cors());  //connects react frontend to backend
 
 // Database Connection with mongodb
 const config = require('./config.json');
@@ -207,6 +207,51 @@ app.post('/login',async (req,res)=>{
     else{
         res.json({success:false,errors:"Wrong Email Id"});
     }
+})
+
+//Creating Middleware to fetch user
+const fetchUser = async(req,res,next) =>{
+    const token = req.header('auth-token');
+    if(!token)
+    {
+        res.status(401).send({errors:"Please authenticate using valid token"});
+    }
+    else{
+        try{
+            const data = jwt.verify(token,'secret_ecom');
+            req.user = data.user;
+            next();
+        }
+        catch(error){
+            res.status(401).send({errors:"please authenticate using a valid token"})
+        }
+    }
+}
+
+//Creating endpoint for adding products in cart
+app.post('/addtocart',fetchUser,async(req,res)=>{
+    console.log("Added",req.body.itemId);
+    let userData = await Users.findOne({_id:req.user.id});
+    userData.cartData[req.body.itemId]++;
+    await Users.findOneAndUpdate({_id:req.user.id},{cartData:userData.cartData}); //finds and updates modified data for user.
+    res.send("Added");
+})
+
+//Creating endpoint to remove product from cartdata
+app.post('/removefromcart',fetchUser,async(req,res)=>{
+    console.log("removed",req.body.itemId);
+    let userData = await Users.findOne({_id:req.user.id});
+    if(userData.cartData[req.body.itemId]>0)
+    userData.cartData[req.body.itemId]--;
+    await Users.findOneAndUpdate({_id:req.user.id},{cartData:userData.cartData}); //finds and updates modified data for user.
+    res.send("Removed");
+})
+
+//Creating endpoint to get CartData
+app.post('/getcart',fetchUser,async(req,res)=>{
+    console.log("GetCart");
+    let userData = await Users.findOne({_id:req.user.id});
+    res.json(userData.cartData);
 })
 
 app.listen(port,(error)=>{
