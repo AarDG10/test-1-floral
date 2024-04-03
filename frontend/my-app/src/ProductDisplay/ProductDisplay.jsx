@@ -1,7 +1,5 @@
 import React, { useContext , useState, useEffect} from 'react'
 import './ProductDisplay.css'
-import star_icon from "../Components/Assets/Plant-Items/star_icon.png"
-import star_dullicon from "../Components/Assets/Plant-Items/star_dull_icon.png"
 import { ShopContext } from '../Context/ShopContext'
 
 const ProductDisplay = (props) => {
@@ -35,23 +33,13 @@ const ProductDisplay = (props) => {
             </div>
             <div className="productdisplay-right-prices">
                 <div className="productdisplay-right-price-old">
-                    ${product.old_price}
-                </div>
+                    Old Price: <s>₹{product.old_price}</s>
+                </div><br/>
                 <div className="productdisplay-right-price-new">
-                    ${product.new_price}
+                    New Price: ₹{product.new_price}
                 </div>
             </div>
             <div className="addstars">
-            <div className="productdisplay-right-star">
-                <img src={star_icon} alt=""/>
-                <img src={star_icon} alt="" />
-                <img src={star_icon} alt="" />
-                <img src={star_icon} alt="" />
-                <img src={star_dullicon} alt="" />
-                <p>
-                    (122)
-                </p>
-            </div>
             <div className="button1">
                 <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
             </div>
