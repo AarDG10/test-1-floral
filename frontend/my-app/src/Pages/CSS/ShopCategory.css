@@ -7,11 +7,12 @@
 }
 .shop-item{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     gap:8px;
     height: 90vh;
-    margin-bottom: 5%;
+    margin-bottom: 100%;
 }
 hr{
     color:var(--dvert);
