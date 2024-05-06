@@ -6,12 +6,14 @@ const jwt = require("jsonwebtoken");
 const multer = require("multer");  //for image storage system
 const path = require("path");
 const cors = require("cors");  //to provide access to react.js project
+const axios= require("axios");  //for the aqi-api
 
 app.use(express.json());
 app.use(cors());  //connects react frontend to backend
 
 // Database Connection with mongodb
 const config = require('./config.json');
+const API_KEY = config.apikey;
 
 mongoose.connect(config.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true }); //Remember to encode passk with uri in case of special chars (%40 for @)
 
@@ -19,6 +21,23 @@ mongoose.connect(config.mongoURI, { useNewUrlParser: true, useUnifiedTopology: t
 app.get("/",(req,res)=>{
     res.send("Express App is running");
 })
+
+// Route to fetch AQI data
+// Route to fetch AQI data
+// app.get('/api/aqi', async (req, res) => {
+//     const { lat, lon } = req.query;
+//     console.log("Fetching AQI data for lat:", lat, "lon:", lon); // Add this line
+//     try {
+//         const response = await axios.get(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`);
+//         const aqiComponents = response.data.list[0].components;
+//         console.log("AQI data:", aqiComponents); // Add this line
+//         res.json(aqiComponents);
+//     } catch (error) {
+//         console.error("Error fetching AQI data:", error.message);
+//         res.status(500).json({ error: 'Error fetching AQI data' });
+//     }
+// });
+
 
 // Image Storage Engine
 

@@ -19,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/medicinal' element={<ShopCategory category="Medicinal"/>}/>
+          <Route path='/aqi' element={<ShopCategory category="aqi"/>}/>
           <Route path='/herb' element={<ShopCategory category="Herb"/>}/>
           <Route path='/aesthetic' element={<ShopCategory category="Aesthetic"/>}/>
           <Route path='/product' element={<Product/>}>

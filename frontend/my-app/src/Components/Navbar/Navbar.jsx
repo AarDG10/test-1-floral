@@ -16,6 +16,7 @@ export const Navbar = () => {
                 <li><Link to='/medicinal'>Medicinal</Link></li>
                 <li><Link to='/aesthetic'>Aesthetic</Link></li>
                 <li><Link to='/herb'>Herbs</Link></li>
+                {/* <li><Link to='/aqi'>AQI</Link></li> */}
                 <li><Link to='/about'>About</Link></li>
                 <li><Link to='/contact'>Contact</Link></li>
                 {localStorage.getItem('auth-token')
