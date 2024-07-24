@@ -19,7 +19,7 @@ const Item = (props) => {
                     </div>
                     <h4>₹{props.new_price}</h4>
                 </div>
-                <Link to='https://mywebar.com/p/Project_1_a1zv16v7r9'><box-icon name='camera'></box-icon></Link>
+                <Link to='https://mywebar.com/p/Project_0_tf5hd65dih'><box-icon name='camera'></box-icon></Link>
                 <Link to={`/product/${props.id}`}>View Product</Link>
       </div>
   )
